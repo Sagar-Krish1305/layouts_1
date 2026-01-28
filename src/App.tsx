@@ -6,6 +6,8 @@ import SidebarAndContent from './layouts/SidebarAndContent';
 import FilterAndGrid from './layouts/FilterAndGrid';
 import MapAndListSplit from './layouts/MapAndListSplit';
 import CRMRecordDetails from './layouts/CRMRecordDetails';
+import DashboardKPI from './layouts/DashboardKPI';
+import DataTable from './layouts/DataTable';
 
 function App() {
     const [currentSelectedLayout, setCurrentSelectedLayout] = useState<string>('3-Column Feed');
@@ -45,6 +47,12 @@ function App() {
 
         case 'CRM Record Detail':
           return <CRMRecordDetails />
+
+        case 'Dashboard KPI':
+          return <DashboardKPI />
+        
+        case 'Data Table':
+          return <DataTable />
 
         default:
           return <ThreeColumnFeed />

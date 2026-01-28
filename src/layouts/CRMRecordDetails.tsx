@@ -1,5 +1,3 @@
-type SideCard = { title: string; meta: string };
-
 export default function CRMRecordDetails() {
 	return (
 		<div className="min-h-screen w-full bg-white text-slate-900 flex flex-col">

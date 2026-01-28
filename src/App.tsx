@@ -3,6 +3,9 @@ import './App.css'
 import LayoutSelectorButton from './components/LayoutSelectorButton'
 import ThreeColumnFeed from './layouts/ThreeColumnFeed';
 import SidebarAndContent from './layouts/SidebarAndContent';
+import FilterAndGrid from './layouts/FilterAndGrid';
+import MapAndListSplit from './layouts/MapAndListSplit';
+import CRMRecordDetails from './layouts/CRMRecordDetails';
 
 function App() {
     const [currentSelectedLayout, setCurrentSelectedLayout] = useState<string>('3-Column Feed');
@@ -33,6 +36,15 @@ function App() {
         
         case 'Sidebar + Content':
           return <SidebarAndContent />
+
+        case 'Filter + Grid':
+          return <FilterAndGrid />
+
+        case 'Map + List Split':
+          return <MapAndListSplit />
+
+        case 'CRM Record Detail':
+          return <CRMRecordDetails />
 
         default:
           return <ThreeColumnFeed />
